@@ -134,7 +134,7 @@ public class BypassRunner extends Configured
 
 	@Override
 	public int run(String[] args) throws Exception {
-		Job job = SelectorMapper.parseInputAndOutput(this, getConf(), args);
+		Job job = JobBuilder.parseInputAndOutput(this, getConf(), args);
 		if (job == null) {
 			return -1;
 		}
